@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Apply the template to a new repository
+# Replace template names with new repository name
+# Reset package*.json versions to 0.1.0
+
 repository=$1
 REPOSITORY_NAME=$(echo "${repository}" | awk -F'/' '{print $NF}')
 
