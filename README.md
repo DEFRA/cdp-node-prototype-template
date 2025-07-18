@@ -1,8 +1,7 @@
-# CDP Node Prototype Template
+# CDP Node.js Prototype Template
 
 `Node.js` prototype template, using the [GOV.UK Prototype Kit](https://github.com/alphagov/govuk-prototype-kit).
-Basically
-the `GOV.UK Prototype Kit` with `CDP` running capabilities.
+Basically the `GOV.UK Prototype Kit` with `CDP` running capabilities.
 
 - [Requirements](#requirements)
   - [Node.js](#nodejs)
