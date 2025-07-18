@@ -24,7 +24,7 @@ USER root
 RUN apk add --no-cache curl
 USER node
 
-# CDP takes care of https in the nginx layer, so we don't need to use https in the app
+# CDP takes care of https in the nginx layer, so we don't need to force https in the app
 ENV USE_HTTPS=false
 # Basic auth on in environments
 ENV USE_AUTH=true
