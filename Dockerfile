@@ -26,8 +26,6 @@ USER node
 
 # CDP takes care of https in the nginx layer, so we don't need to force https in the app
 ENV USE_HTTPS=false
-# Basic auth on in environments
-ENV USE_AUTH=true
 ENV NODE_ENV=production
 
 COPY --from=development /home/node/package*.json ./

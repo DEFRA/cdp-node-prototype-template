@@ -5,28 +5,27 @@ the [GOV.UK Frontend](https://github.com/alphagov/govuk-frontend).
 
 > Basically the `GOV.UK Prototype Kit` and `GOV.UK Frontend` wrapped up and provided on the Core Delivery Platform
 
-- [Requirements](#requirements)
-  - [Node.js](#nodejs)
-- [GOV.UK Prototype Kit and GOV.UK Frontend](#govuk-prototype-kit-and-govuk-frontend)
-- [Using the refreshed GOV.UK brand](#using-the-refreshed-govuk-brand)
-- [Setting a password](#setting-a-password)
-- [Setting multiple passwords](#setting-multiple-passwords)
-- [Npm scripts](#npm-scripts)
-  - [Formatting](#formatting)
-    - [Windows prettier issue](#windows-prettier-issue)
-- [Updating dependencies](#updating-dependencies)
-- [Environment Variables and Secrets](#environment-variables-and-secrets)
-  - [Local development](#local-development)
-  - [Environment Variables on CDP](#environment-variables-on-cdp)
-  - [Environment Variables in the GOV.UK Prototype Kit](#environment-variables-in-the-govuk-prototype-kit)
-  - [Secrets](#secrets)
-- [Creating a secret](#creating-a-secret)
-- [Docker](#docker)
-  - [Development image](#development-image)
-  - [Production image](#production-image)
-  - [Debug docker](#debug-docker)
-- [Licence](#licence)
-  - [About the licence](#about-the-licence)
+* [Requirements](#requirements)
+  * [Node.js](#nodejs)
+* [GOV.UK Prototype Kit and GOV.UK Frontend](#govuk-prototype-kit-and-govuk-frontend)
+* [Using the refreshed GOV.UK brand](#using-the-refreshed-govuk-brand)
+* [Setting a password](#setting-a-password)
+* [Setting multiple passwords](#setting-multiple-passwords)
+* [Removing the need for a password](#removing-the-need-for-a-password)
+* [Npm scripts](#npm-scripts)
+* [Updating dependencies](#updating-dependencies)
+* [Environment Variables and Secrets](#environment-variables-and-secrets)
+  * [Local development](#local-development)
+  * [Environment Variables on CDP](#environment-variables-on-cdp)
+  * [Environment Variables in the GOV.UK Prototype Kit](#environment-variables-in-the-govuk-prototype-kit)
+  * [Secrets](#secrets)
+* [Creating a secret](#creating-a-secret)
+* [Docker](#docker)
+  * [Development image](#development-image)
+  * [Production image](#production-image)
+  * [Debug docker](#debug-docker)
+* [Licence](#licence)
+  * [About the licence](#about-the-licence)
 
 ## Requirements
 
@@ -109,6 +108,19 @@ this read the **If you want to create additional passwords** section on
 https://prototype-kit.service.gov.uk/docs/publishing. To add a secret to an environment your prototype is running in
 see [Creating a secret](#creating-a-secret)
 
+## Removing the need for a password
+
+By default, the `GOV.UK Prototype Kit` requires a password has been set on your prototype when it has been deployed to
+an environment. If you would like to turn off this requirement you can do so by setting the following environment
+variable:
+
+```dotenv
+ENV USE_AUTH=false
+```
+
+This can be set in `cdp-app-config` for instructions on how to do so
+read [Environment Variables on CDP](#environment-variables-on-cdp).
+
 ## Npm scripts
 
 All available Npm scripts can be seen in [package.json](./package.json)
@@ -116,28 +128,6 @@ To view them in your command line run:
 
 ```bash
 npm run
-```
-
-### Formatting
-
-To format the code in this repository we use [Prettier](https://prettier.io/). To format the code:
-
-```bash
-npm run format
-```
-
-To check formatting changes:
-
-```bash
-npm run format:check
-```
-
-#### Windows prettier issue
-
-If you are having issues with formatting of line breaks on Windows update your global git config by running:
-
-```bash
-git config --global core.autocrlf false
 ```
 
 ## Updating dependencies
@@ -157,7 +147,7 @@ Environment variables and Secrets are used to configure your prototype. Where yo
 below.
 
 | Type                                                      | Environment               | Where to set them                                   |
-| --------------------------------------------------------- | ------------------------- | --------------------------------------------------- |
+|-----------------------------------------------------------|---------------------------|-----------------------------------------------------|
 | Sensitive secrets and Non-sensitive environment variables | local                     | `.env` file                                         |
 | Sensitive secrets                                         | CDP (`dev` or `ext-test`) | CDP Portal Frontend services secrets page           |
 | Non-sensitive environment variables                       | CDP (`dev` or `ext-test`) | CDP App Config repository by raising a pull request |
