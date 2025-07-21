@@ -5,5 +5,4 @@
 
 rm -f .github/workflows/template.yml
 rm -f .github/workflows/validate-template.yml
-rm -f .github/workflows/check-pull-request.yml
 rm -rf .github/template/
