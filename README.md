@@ -146,11 +146,11 @@ ncu --interactive --format group
 Environment variables and Secrets are used to configure your prototype. Where you set them can be seen in the table
 below.
 
-| Type                                                      | Environment               | Where to set them                                   |
-|-----------------------------------------------------------|---------------------------|-----------------------------------------------------|
-| Sensitive secrets and Non-sensitive environment variables | local                     | `.env` file                                         |
-| Sensitive secrets                                         | CDP (`dev` or `ext-test`) | CDP Portal Frontend services secrets page           |
-| Non-sensitive environment variables                       | CDP (`dev` or `ext-test`) | CDP App Config repository by raising a pull request |
+| Type                                                      | Environment | Where to set them                                   |
+|-----------------------------------------------------------|-------------|-----------------------------------------------------|
+| Sensitive secrets and Non-sensitive environment variables | local       | `.env` file                                         |
+| Sensitive secrets                                         | CDP         | CDP Portal Frontend services secrets page           |
+| Non-sensitive environment variables                       | CDP         | CDP App Config repository by raising a pull request |
 
 ### Local development
 
