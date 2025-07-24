@@ -5,27 +5,27 @@ the [GOV.UK Frontend](https://github.com/alphagov/govuk-frontend).
 
 > Basically the `GOV.UK Prototype Kit` and `GOV.UK Frontend` wrapped up and provided on the Core Delivery Platform
 
-* [Requirements](#requirements)
-  * [Node.js](#nodejs)
-* [GOV.UK Prototype Kit and GOV.UK Frontend](#govuk-prototype-kit-and-govuk-frontend)
-* [Using the refreshed GOV.UK brand](#using-the-refreshed-govuk-brand)
-* [Setting a password](#setting-a-password)
-* [Setting multiple passwords](#setting-multiple-passwords)
-* [Removing the need for a password](#removing-the-need-for-a-password)
-* [Npm scripts](#npm-scripts)
-* [Updating dependencies](#updating-dependencies)
-* [Environment Variables and Secrets](#environment-variables-and-secrets)
-  * [Local development](#local-development)
-  * [Environment Variables on CDP](#environment-variables-on-cdp)
-  * [Environment Variables in the GOV.UK Prototype Kit](#environment-variables-in-the-govuk-prototype-kit)
-  * [Secrets](#secrets)
-* [Creating a secret](#creating-a-secret)
-* [Docker](#docker)
-  * [Development image](#development-image)
-  * [Production image](#production-image)
-  * [Debug docker](#debug-docker)
-* [Licence](#licence)
-  * [About the licence](#about-the-licence)
+- [Requirements](#requirements)
+  - [Node.js](#nodejs)
+- [GOV.UK Prototype Kit and GOV.UK Frontend](#govuk-prototype-kit-and-govuk-frontend)
+- [Using the refreshed GOV.UK brand](#using-the-refreshed-govuk-brand)
+- [Setting a password](#setting-a-password)
+- [Setting multiple passwords](#setting-multiple-passwords)
+- [Removing the need for a password](#removing-the-need-for-a-password)
+- [Npm scripts](#npm-scripts)
+- [Updating dependencies](#updating-dependencies)
+- [Environment Variables and Secrets](#environment-variables-and-secrets)
+  - [Local development](#local-development)
+  - [Environment Variables on CDP](#environment-variables-on-cdp)
+  - [Environment Variables in the GOV.UK Prototype Kit](#environment-variables-in-the-govuk-prototype-kit)
+  - [Secrets](#secrets)
+- [Creating a secret](#creating-a-secret)
+- [Docker](#docker)
+  - [Development image](#development-image)
+  - [Production image](#production-image)
+  - [Debug docker](#debug-docker)
+- [Licence](#licence)
+  - [About the licence](#about-the-licence)
 
 ## Requirements
 
@@ -147,7 +147,7 @@ Environment variables and Secrets are used to configure your prototype. Where yo
 below.
 
 | Type                                                      | Environment | Where to set them                                   |
-|-----------------------------------------------------------|-------------|-----------------------------------------------------|
+| --------------------------------------------------------- | ----------- | --------------------------------------------------- |
 | Sensitive secrets and Non-sensitive environment variables | local       | `.env` file                                         |
 | Sensitive secrets                                         | CDP         | CDP Portal Frontend services secrets page           |
 | Non-sensitive environment variables                       | CDP         | CDP App Config repository by raising a pull request |
@@ -175,12 +175,10 @@ pull request.
 The following environment variables are available in the `GOV.UK Prototype Kit`. For more information see
 their https://prototype-kit.service.gov.uk/docs/ or https://github.com/alphagov/govuk-prototype-kit.
 
-```markdown
 | Name            | Value    | Description                                              |
 | --------------- | -------- | -------------------------------------------------------- |
 | `PASSWORD`      | `string` | Password for basic authentication                        |
 | `PASSWORD_KEYS` | `string` | Comma-separated list of keys for password authentication |
-```
 
 ### Secrets
 
