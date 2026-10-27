@@ -1,8 +1,4 @@
 {
   "serviceName": "CDP Node.js Prototype Template",
-  "plugins": {
-    "govuk-frontend": {
-      "rebrand": true
-    }
-  }
+  "useServiceNavigation": true
 }

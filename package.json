@@ -12,9 +12,9 @@
     "format:check": "prettier --check \"**/*.{cjs,js,json,md}\""
   },
   "dependencies": {
-    "@govuk-prototype-kit/common-templates": "3.0.0",
-    "govuk-frontend": "6.5.0",
-    "govuk-prototype-kit": "13.20.4"
+    "@govuk-prototype-kit/common-templates": "3.0.1",
+    "govuk-frontend": "6.6.0",
+    "govuk-prototype-kit": "14.0.2"
   },
   "devDependencies": {
     "prettier": "3.9.6"
