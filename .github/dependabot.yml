@@ -18,6 +18,13 @@ updates:
           - 'govuk-frontend'
           - 'govuk-prototype-kit'
 
+    # Allow releases to settle into a stable state before updating
+    cooldown:
+      default-days: 5
+      semver-major-days: 20
+      semver-minor-days: 7
+      semver-patch-days: 3
+
     # Schedule run every Monday, local time
     schedule:
       interval: weekly
